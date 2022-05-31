@@ -1,12 +1,22 @@
-import logo from './logo.svg';
+import React from 'react';
+
 import './App.css';
+import Counter from './components/Counter/Counter.js'; 
+import NavBar from './components/NavBar/NavBar.js';
+import ItemListContainer from './components/ItermListContainer/ItemListContainer';
+
 
 function App() {
+
+ 
   return (
     <div className="App">
-      <header className="App-header">
+      <NavBar/> 
+      <ItemListContainer greeting="Bienvenido a la tienda"/>
+      {/*<header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
+        <h1 className="Titulo">Hi Honey!</h1>
+        <p style={{backgroundColor: "green"}}>
           Bienvenido a mi tienda
         </p>
         <a
@@ -17,7 +27,11 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+
+        <button>Vamos a aprender</button>
+  </header>*/}
+  <Counter initial={0} stock={10} title="Contador" />
+  
     </div>
   );
 }
