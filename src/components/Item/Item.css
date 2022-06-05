@@ -1,0 +1,8 @@
+.imagendeproducto {
+    height: 380px;
+    width: 320px;
+    background-color: rgb(43, 40, 32);
+    text-align:inherit;
+    font: oblique;
+    font-size: medium;
+}

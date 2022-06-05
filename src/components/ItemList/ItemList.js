@@ -1,10 +1,12 @@
-const ItemList = () => {
+import Item from "../Item/Item.js"
+
+const ItemList = ({productos}) => {
     return (
         <ul>
-        <li> Miel Pura </li>
-        <li> Miel Infusionada </li>
-        <li> Miel Gourmet </li>
-        <li></li>
+        {
+                    productos.map ( miel => <Item key={miel.id} {...miel}/>) 
+                }
+
     
     </ul>
 
