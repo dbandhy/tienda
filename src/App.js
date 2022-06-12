@@ -5,10 +5,13 @@ import Counter from './components/Counter/Counter.js';
 import NavBar from './components/NavBar/NavBar.js';
 import ItemListContainer from './components/ItermListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
 function App() {
+  
   const [show, setShow] = useState(true)
+//  const [pagina, setPagina] = useState ("Lista")  
 
 
   const handleAdd = () => {
@@ -19,8 +22,14 @@ function App() {
     <div className="App">
 
 
-      <NavBar/> 
-      <ItemListContainer greeting="Bienvenido a la tienda"/>
+    {/*  <NavBar/>
+      <div>
+        <button onClick={() => setPagina("Lista")}>Lista</button>
+        <button onClick={() => setPagina("Detalle")}>Detalle</button>
+      </div>*/}
+      {/*pagina === "Lista" && <ItemListContainer greeting="Bienvenido a la tienda"/>}
+      {pagina === "Detalle" && <ItemDetailContainer/>}
+  <MercadoLibre/>
       {/*<header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <h1 className="Titulo">Hi Honey!</h1>*/}
@@ -40,7 +49,14 @@ function App() {
   </header>*/}
   <button onClick= {() => setShow(!show)}> Show/hide </button>
   { show && <Counter initial={0} stock={10} onAdd={handleAdd} /> }
-  
+      <BrowserRouter>
+        <NavBar/>
+        <Routes>
+          <Route path='/' element={<ItemListContainer greeting="Bienvenido a la tienda"/>} />
+          <Route path='/Categoría/:CategoríaId' element={<ItemListContainer/>} />
+          <Route path='/Detalle/:productoId' element={<ItemDetailContainer/>} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

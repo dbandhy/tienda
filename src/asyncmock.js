@@ -39,3 +39,12 @@ export const getProductos = () => {
     })
 }
 
+export const getProductoByID = (id) => {
+    return new Promise ((resolve, reject) => {
+        setTimeout(() => {
+            resolve(productos.find(miel => miel.id=== id))
+        }, 500) 
+    })
+}
+
+
