@@ -1,6 +1,6 @@
 .titulo {
     color:rgb(243, 219, 104);
-    font-size: 3.3rem;
+    font-size: 2.2rem;
     
 }
 
@@ -11,8 +11,8 @@
     align-items: center;
     position: relative;
     padding: 0.5rem 0rem;
-    background-color: rgb(50, 52, 38);
-    color: black;
+    background-color: rgb(122, 101, 50);
+    color: rgb(198, 128, 30);
     box-shadow: 0 4px 4px 4px rgba(197, 134, 134, 0.23);
   }
 
@@ -22,13 +22,29 @@
     box-sizing: border-box;
     box-decoration-break: clone;
     text-decoration: navajowhite;
-    color: black;
+    color: rgb(190, 215, 91);
     font-size: 1.3rem;
     margin-left: 4rem;
     position: relative;
-  cursor: pointer;
+    cursor: pointer;
 
   }
+
+  .textoSeleccionado {
+
+    align-items: center;
+    box-sizing: border-box;
+    box-decoration-break: clone;
+    text-decoration: navajowhite;
+    color: rgb(226, 235, 190);
+    font-size: 1.4rem;
+    margin-left: 4rem;
+    position: relative;
+    cursor: pointer;
+
+  }
+
+
 
 .navigation-menu {
     margin-left: auto;

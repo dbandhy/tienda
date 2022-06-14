@@ -11,7 +11,7 @@ const productos = [
 
     {
         id: "2",
-        nombre: "miel con limón",
+        nombre: "Miel con limón",
         precio: 25,
         categoria: "miel infusionada",
         img: "/images/limon.jpg",
@@ -42,9 +42,16 @@ export const getProductos = () => {
 export const getProductoByID = (id) => {
     return new Promise ((resolve, reject) => {
         setTimeout(() => {
-            resolve(productos.find(miel => miel.id=== id))
+            resolve(productos.find(miel => miel.id=== parseInt(id)))
         }, 500) 
     })
 }
 
+export const getProductoByCategoria = (categoriaId) => {
+    return new Promise ((resolve, reject) => {
+        setTimeout(() => {
+            resolve(productos.filter(miel => miel.categoria.toLowerCase() === categoriaId.toLowerCase()))
+        }, 500) 
+    })
+}
 

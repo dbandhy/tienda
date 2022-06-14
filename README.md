@@ -1,70 +1,45 @@
+# Hi Honey! Project
+
+Este es un proyecto de ecommerce acerca de una tienda especializada en miel de abeja
+
+# Características del producto
+
+Hi Honey vende mieles de abejas en distintos formatos: va desde la miel natural hasta mieles combinadas con frutos secos o mieles que pueden ser usadas como condimentos específicos. Va más allá de la miel convencional.
+
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Para ingresar al proyecto primero debes correr npm install
 
-## Available Scripts
+# Trabajar el código
 
-In the project directory, you can run:
+El condigo fuente del proyecto se realizó con React, JS, HTML y CSS. Para desarrollar el proyecto se descargó la última versión de React y se editó con las necesidades de Hi Honey!
 
-### `npm start`
+# Carpetas y visualización
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+La metodología en que se basa Hi Honey! en React es a través de Componentes. Por ende se trabajó la creación de varias carpetas, donde cada una presenta un componente Padre o Hijo y su respectivo archivo CSS para exportarlo con estilos predeterminados.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Pruebas
 
-### `npm test`
+Para correr cada edición del código se busca en la terminal la carpeta con el proyecto app1. Emplear comando cd/NOMBREDECARPETA o cd.. PARA RETROCEDER A UNA CARPETA ANTERIOR.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Ver en tiempo real cambios.
 
-### `npm run build`
+Se ejecuta npm start en la ubicación de la carpeta en el terminal y listo: puedes ver como queda el proyecto React en tiempo real.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Carpetas relevantes
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+En la carpeta /images/ se guardarán todas las imágenes en formato jpg y png.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Subir a github
 
-### `npm run eject`
+Para realizar una actualización en el proyecto en github se siguen los siguientes pasos:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    # GIT STATUS: Permite conocer la rama del proyecto.
+    # GIT INIT: Ejecuta el proyecto por primera vez.
+    # GIT add: es el primer paso para agregar cambios en el repositorio.
+    # GIT commit: lleva al servidor los cambios añadidos con GIT add.
+    # GIT push: actualiza el repositorio. Es el último paso.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### OBSERVACIONES
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Este es un proyecto pensando en mostrar productos. Información de empresa u otro contenido no se encontrará.

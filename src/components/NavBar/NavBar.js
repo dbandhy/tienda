@@ -1,6 +1,6 @@
 import "./NavBar.css"
 import CartWidget from "../CartWidget/CartWidget"
-import { Link } from "react-router-dom"
+import { Link , NavLink } from "react-router-dom"
 
 const NavBar = () => {
     return (
@@ -10,15 +10,15 @@ const NavBar = () => {
         
             <h1 className="titulo">HI HONEY!</h1>
         </Link>
-            <div className="texto">
+            <div className="nav">
         
         
 
 
-                <Link to="/Categoría/MielPura" className="texto"> Miel Pura </Link>
-                <Link to="/Categoría/MielInfusionada" className="texto"> Miel Infusionada </Link>
-                <Link to="/Categoría/MielGourmet" className="texto"> Miel Gourmet </Link>
-                <Link to="/Categoría/MielCosmética" className="texto"> Miel Cosmética </Link>
+                <NavLink to="/Categoria/MielPura" className= {({ isActive }) => isActive ? 'texto' : 'textoSeleccionado'}> Miel Pura </NavLink>
+                <NavLink to="/Categoria/MielInfusionada" className= {({ isActive }) => isActive ? 'texto' : 'textoSeleccionado'}> Miel Infusionada </NavLink>
+                <NavLink to="/Categoria/MielGourmet" className= {({ isActive }) => isActive ? 'texto' : 'textoSeleccionado'}> Miel Gourmet </NavLink>
+                <NavLink to="/Categoria/MielCosmética" className= {({ isActive }) => isActive ? 'texto' : 'textoSeleccionado'}> Miel Cosmética </NavLink>
 
                 
                 

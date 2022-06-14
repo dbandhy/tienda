@@ -6,7 +6,7 @@ import NavBar from './components/NavBar/NavBar.js';
 import ItemListContainer from './components/ItermListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
+import NoExiste from './components/NoExiste/NoExiste';
 
 function App() {
   
@@ -51,10 +51,13 @@ function App() {
   { show && <Counter initial={0} stock={10} onAdd={handleAdd} /> }
       <BrowserRouter>
         <NavBar/>
+
         <Routes>
           <Route path='/' element={<ItemListContainer greeting="Bienvenido a la tienda"/>} />
-          <Route path='/Categoría/:CategoríaId' element={<ItemListContainer/>} />
-          <Route path='/Detalle/:productoId' element={<ItemDetailContainer/>} />
+          <Route path='acercade' element={<h1>Acerca de Hi Honey!</h1>}/>
+          <Route path='/categoria/:categoriaId' element={<ItemListContainer/>} />
+          <Route path='/detalle/:productosId' element={<ItemDetailContainer/>} />
+          <Route path='*' element={<NoExiste/>} />
         </Routes>
       </BrowserRouter>
     </div>
