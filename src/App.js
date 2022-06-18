@@ -56,7 +56,7 @@ function App() {
           <Route path='/' element={<ItemListContainer greeting="Bienvenido a la tienda"/>} />
           <Route path='acercade' element={<h1>Acerca de Hi Honey!</h1>}/>
           <Route path='/categoria/:categoriaId' element={<ItemListContainer/>} />
-          <Route path='/detalle/:productosId' element={<ItemDetailContainer/>} />
+          <Route path='/detalle/:productoId' element={<ItemDetailContainer/>} />
           <Route path='*' element={<NoExiste/>} />
         </Routes>
       </BrowserRouter>

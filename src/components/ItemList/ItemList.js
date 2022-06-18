@@ -3,13 +3,13 @@ import Item from "../Item/Item.js"
 
 const ItemList = ({productos}) => {
     return (
-        <ul className="ListGroup">
+        <div className="ListGroup" onClick={() => console.log("Hice click en IL")}>
         {
                     productos.map ( miel => <Item key={miel.id} {...miel}/>) 
                 }
 
     
-    </ul>
+    </div>
 
     )
 } 
