@@ -1,5 +1,6 @@
 import { useState } from "react";
-
+import { useContext } from "react";
+import CartContexto, { cartContexto } from "../../context/CartContext"
 
 const InputContar = ({initial = 1, stock, onAdd}) => {
     const [ count, setCount ] = useState(initial)
@@ -47,18 +48,25 @@ const BotonContar = ({initial = 0, stock, onAdd}) => {
 }
 
 
-const ItemDetail = ({id, nombre, descripcion, img}) => {
-
+const ItemDetail = ({ id, nombre, precio, descripcion, img}) => {
+    const { addItem } = useContext(CartContexto)
+    
+//    console.log(setCart)
+    const handleonAdd = (quantity) => {
+        console.log(`se agregaron ${quantity} ${nombre} `)
+//    
+   addItem ({id, precio, nombre, quantity })
+}
     return (
-        <>
-            <h2>Detalle</h2>
-            {id}
-            {img}
-            {nombre}
-            {descripcion}
-            <BotonContar onAdd={(count) => console.log(count)} />
-            <InputContar onAdd={(count) => console.log(count)}  />
-        </>
+        <article>
+             <h2>Detalle</h2>
+                <h3>{id}</h3>    
+                <picture> <img src={img} alt={nombre}/> </picture>   
+                <p>{nombre}</p>    
+                <p>{descripcion}</p>    
+                <BotonContar onAdd={(count) => console.log(count)} />
+                <InputContar onAdd={(count) => console.log(count)}  />
+        </article>
     )
 }
 
