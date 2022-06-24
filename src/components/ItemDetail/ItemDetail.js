@@ -1,6 +1,7 @@
-import { useState } from "react";
-import { useContext } from "react";
-import CartContexto, { cartContexto } from "../../context/CartContext"
+
+import { useContext , useState, Link } from "react";
+import CartContexto from "../../context/CartContext"
+import ItemCount from "../ItemCount/ItemCount";
 
 const InputContar = ({initial = 1, stock, onAdd}) => {
     const [ count, setCount ] = useState(initial)
@@ -48,14 +49,17 @@ const BotonContar = ({initial = 0, stock, onAdd}) => {
 }
 
 
-const ItemDetail = ({ id, nombre, precio, descripcion, img}) => {
+const ItemDetail = ({ id, nombre, precio, stock, descripcion, img}) => {
+    const [quantityAdded, setQuantityAdded] = useState(0)
+    
     const { addItem } = useContext(CartContexto)
     
 //    console.log(setCart)
-    const handleonAdd = (quantity) => {
+    const handleOnAdd = (quantity) => {
         console.log(`se agregaron ${quantity} ${nombre} `)
 //    
-   addItem ({id, precio, nombre, quantity })
+       addItem ({id, precio, nombre, quantity })
+       setQuantityAdded(quantity)
 }
     return (
         <article>
@@ -66,6 +70,13 @@ const ItemDetail = ({ id, nombre, precio, descripcion, img}) => {
                 <p>{descripcion}</p>    
                 <BotonContar onAdd={(count) => console.log(count)} />
                 <InputContar onAdd={(count) => console.log(count)}  />
+        
+        <footer>
+            { quantityAdded === 0
+                ? <ItemCount stock={stock} onAdd={handleOnAdd} />
+                :  <Link to='/cart' > Finalizar Compra </Link>
+            }
+        </footer>
         </article>
     )
 }
