@@ -63,20 +63,20 @@ const ItemDetail = ({ id, nombre, precio, stock, descripcion, img}) => {
 }
     return (
         <article>
-             <h2>Detalle</h2>
-                <h3>{id}</h3>    
-                <picture> <img src={img} alt={nombre}/> </picture>   
-                <p>{nombre}</p>    
-                <p>{descripcion}</p>    
+             <h2>Detalle: {nombre}</h2>
+                <h3>ID: {id}</h3>    
+                <picture> Fuente: Hi Honey! <img src={img} alt={nombre}/> </picture>   
+                    
+                <h3>Producto: {descripcion}</h3>    
                 <BotonContar onAdd={(count) => console.log(count)} />
                 <InputContar onAdd={(count) => console.log(count)}  />
         
-        <footer>
+        <p>
             { quantityAdded === 0
                 ? <ItemCount stock={stock} onAdd={handleOnAdd} />
-                :  <Link to='/cart' > Finalizar Compra </Link>
+                : <Link to='/cart' > Terminar compra </Link>
             }
-        </footer>
+        </p>
         </article>
     )
 }

@@ -17,22 +17,22 @@ const productos = [
         img: "/images/limon.jpg",
         stock: 25,
         descripcion: "Miel con limón para bebidas calientes. No necesita azúcar al servirla"
-        },
+    },
 
     {
         id: "3",
-        nombre : "miel con frutos secos",
+        nombre: "miel con frutos secos",
         precio: 30,
         categoria: "miel gourmet",
         img: "/images/frutoseco.jpg",
         stock: 25,
         descripcion: "condimento de miel mezclado con frutos secos"
-        }
+    }
 
 ]
 
 export const getProductos = () => {
-    return new Promise ((resolve, reject) => {
+    return new Promise ((resolve, reject ) => {
         setTimeout(() => {
             resolve(productos)
         }, 3000) 
@@ -40,15 +40,15 @@ export const getProductos = () => {
 }
 
 export const getProductoByID = (id) => {
-    return new Promise ((resolve, reject) => {
+    return new Promise ((resolve, reject ) => {
         setTimeout(() => {
-            resolve(productos.find(miel => miel.id=== parseInt(id)))
+            resolve(productos.find(miel => miel.id === id))
         }, 500) 
     })
 }
 
 export const getProductoByCategoria = (categoriaId) => {
-    return new Promise ((resolve, reject) => {
+    return new Promise ((resolve, reject ) => {
         setTimeout(() => {
             resolve(productos.filter(miel => miel.categoria.toLowerCase() === categoriaId.toLowerCase()))
         }, 500) 
