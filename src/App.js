@@ -1,4 +1,4 @@
-import React, { useState , createContext } from 'react';
+import React, { useState } from 'react';
 
 import './App.css';
 import Counter from './components/Counter/Counter.js'; 
@@ -8,6 +8,7 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NoExiste from './components/NoExiste/NoExiste';
 import { CartProvider } from './context/CartContext';
+import Compra from './components/Compra/Compra';
 
 function App() {
   
@@ -61,7 +62,7 @@ function App() {
             <Route path='acercade' element={<h1>Acerca de Hi Honey!</h1>}/>
             <Route path='/categoria/:categoriaId' element={<ItemListContainer/>} />
             <Route path='/detalle/:productoId' element={<ItemDetailContainer/>} />
-            <Route path='/cart' element={<h1>CARRITO DE COMPRA</h1>}/>
+            <Route path='/cart' element={<Compra/>}/>
             <Route path='*' element={<NoExiste/>} />
           </Routes>
         </BrowserRouter>

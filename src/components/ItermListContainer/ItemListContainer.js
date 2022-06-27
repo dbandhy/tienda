@@ -49,7 +49,7 @@ const ItemListContainer = (props) => {
 //        )
 //    })
     
-    console.log(categoriaId)
+//    console.log(categoriaId)
     return (
         <div>
             <h1 className="titulo1">{props.greeting}</h1>

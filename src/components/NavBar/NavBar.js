@@ -15,10 +15,10 @@ const NavBar = () => {
         
 
 
-                <NavLink to="/Categoria/MielPura" className= {({ isActive }) => isActive ? 'texto' : 'textoSeleccionado'}> Miel Pura </NavLink>
-                <NavLink to="/Categoria/MielInfusionada" className= {({ isActive }) => isActive ? 'texto' : 'textoSeleccionado'}> Miel Infusionada </NavLink>
-                <NavLink to="/Categoria/MielGourmet" className= {({ isActive }) => isActive ? 'texto' : 'textoSeleccionado'}> Miel Gourmet </NavLink>
-                <NavLink to="/Categoria/MielCosmética" className= {({ isActive }) => isActive ? 'texto' : 'textoSeleccionado'}> Miel Cosmética </NavLink>
+                <NavLink to="/categoria/MielPura" className= {({ isActive }) => isActive ? 'texto' : 'textoSeleccionado'}> Miel Pura </NavLink>
+                <NavLink to="/categoria/MielInfusionada" className= {({ isActive }) => isActive ? 'texto' : 'textoSeleccionado'}> Miel Infusionada </NavLink>
+                <NavLink to="/categoria/MielGourmet" className= {({ isActive }) => isActive ? 'texto' : 'textoSeleccionado'}> Miel Gourmet </NavLink>
+                <NavLink to="/categoria/MielCosmética" className= {({ isActive }) => isActive ? 'texto' : 'textoSeleccionado'}> Miel Cosmética </NavLink>
 
                 
                 

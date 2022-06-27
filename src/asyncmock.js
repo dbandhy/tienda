@@ -39,6 +39,15 @@ export const getProductos = () => {
     })
 }
 
+export const getProductoByCategoria = (categoriaId) => {
+    return new Promise ((resolve, reject ) => {
+        setTimeout(() => {
+            resolve(productos.filter(miel => miel.categoria === categoriaId))
+        }, 500) 
+    })
+}
+
+
 export const getProductoByID = (id) => {
     return new Promise ((resolve, reject ) => {
         setTimeout(() => {
@@ -47,11 +56,4 @@ export const getProductoByID = (id) => {
     })
 }
 
-export const getProductoByCategoria = (categoriaId) => {
-    return new Promise ((resolve, reject ) => {
-        setTimeout(() => {
-            resolve(productos.filter(miel => miel.categoria.toLowerCase() === categoriaId.toLowerCase()))
-        }, 500) 
-    })
-}
 
