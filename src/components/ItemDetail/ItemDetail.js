@@ -3,6 +3,8 @@ import { useContext , useState  } from "react";
 import CartContexto from "../../context/CartContext"
 import ItemCount from "../ItemCount/ItemCount"
 import { Link } from "react-router-dom";
+// import NotificacionContexto from "../../Notification/Notification";
+import { useNotificacion } from "../../Notification/Notification";
 
 // const InputContar = ({initial = 1, stock, onAdd}) => {
 //     const [ count, setCount ] = useState(initial)
@@ -54,10 +56,12 @@ const ItemDetail = ({ id, nombre, precio, stock, categoria, descripcion, img}) =
     const [quantityAdded, setQuantityAdded] = useState(0)
     
     const { addItem } = useContext(CartContexto)
+
+    const setNotificacion = useNotificacion()
     
 //    console.log(setCart)
     const handleOnAdd = (quantity) => {
-        console.log(`se agregaron ${quantity} ${nombre} `)
+        setNotificacion("gracias por pensar en Hi Honey!" , `se agregaron ${quantity} ${nombre} `)
 //    
        addItem ({id, precio, nombre, quantity })
        setQuantityAdded(quantity)

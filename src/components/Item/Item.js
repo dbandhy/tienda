@@ -4,7 +4,7 @@ import {Link } from "react-router-dom";
 // import { Contexto } from "../../App";
 
 
-const Item = ( { id, nombre , img, precio } ) => {
+const Item = ( { id, nombre , img, precio, categoria } ) => {
 
 
     return(
@@ -17,6 +17,9 @@ const Item = ( { id, nombre , img, precio } ) => {
             <section>
                 <p>
                     Precio: ${precio}
+                </p>
+                <p>
+                    ${categoria}
                 </p>
             </section>
             <footer>

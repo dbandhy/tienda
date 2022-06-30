@@ -9,6 +9,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NoExiste from './components/NoExiste/NoExiste';
 import { CartProvider } from './context/CartContext';
 import Compra from './components/Compra/Compra';
+// import Notificacion from './Notification/Notification';
+import { NotificacionProvider } from './Notification/Notification';
 
 function App() {
   
@@ -53,8 +55,10 @@ function App() {
   </header>*/}
   <button onClick= {() => setShow(!show)}> Show/hide </button>
   { show && <Counter initial={0} stock={10} onAdd={handleAdd} /> }
+    <NotificacionProvider>
       <CartProvider>
         <BrowserRouter>
+
           <NavBar/>
 
           <Routes>
@@ -67,6 +71,7 @@ function App() {
           </Routes>
         </BrowserRouter>
         </CartProvider>  
+      </NotificacionProvider>   
     </div>
   );
 }
