@@ -1,16 +1,16 @@
 import "./ItemListContainer.css"
 import ItemList from  "../ItemList/ItemList.js"
 import { useState, useEffect } from "react"
-import { getProductos , getProductoByCategoria } from "../../asyncmock"
+//import { getProductos , getProductoByCategoria } from "../../asyncmock"
 import { useParams } from "react-router-dom"
-import { getDocs , collection, doc , query, where } from "firebase/firestore"
+import { getDocs , collection , query, where } from "firebase/firestore"
 import { db } from "../../services/firebase"
 
 
 const ItemListContainer = (props) => {
 
     const [productos, SetProductos] = useState([])
-    const [cargando, setCargando] = useState(false)
+    const [cargando, setCargando] = useState(true)
 
     const [banner, setBanner] = useState("BIENVENIDOS A HI HONEY!")
     //Este id proviene de la URL
@@ -22,7 +22,7 @@ const ItemListContainer = (props) => {
         const collectionRef = categoriaId ? ( query(collection(db, 'productos'), where('categoria', '==', categoriaId))  ) : ( collection (db, 'productos') )
 
         getDocs(collectionRef).then(response => {
-            const productosFirebase = response.docs.map(docs => {
+            const productosFirebase = response.docs.map(doc => {
                 return {id: doc.id, ...doc.data() }
             })
             SetProductos(productosFirebase)
@@ -50,7 +50,7 @@ const ItemListContainer = (props) => {
         //     })
         // }
         
-    }, [categoriaId])
+    }, [categoriaId] )
 
     useEffect(() => {
         setTimeout(() => {
@@ -77,7 +77,7 @@ const ItemListContainer = (props) => {
         <div>
             <h1 className="titulo1">{banner}</h1>
             {productos.length > 0 
-                ? <ItemList productos ={productos}/>
+                ? <ItemList productos={productos}/>
                 : <h1>PROXIMAMENTE</h1>
             }
 
