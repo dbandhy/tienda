@@ -21,10 +21,7 @@ const Notificacion = ({message, severity}) => {
         className: `${severity === "error" ? "Error" : "Exito"}`
     } : {}
 
-    // Corta la funcion rápidamente en null
-
-            //if (message==="") return 
-
+    
     return (
     //    <div style={notificacionEstilo} className={`${severity === "error" ? "Error" : "Exito"}`}>
         <div { ...estilo}>

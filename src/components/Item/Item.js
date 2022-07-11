@@ -1,7 +1,5 @@
 import "./Item.css"
 import { Link } from "react-router-dom";
-//import { useContext } from "react";
-// import { Contexto } from "../../App";
 
 
 const Item = ( { id, nombre , img, precio, categoria } ) => {

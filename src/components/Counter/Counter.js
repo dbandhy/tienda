@@ -8,7 +8,7 @@ const Counter = ({initial, stock, title, onAdd}) => {
 
     const [ count, setCount ] = useState(initial)
     const [ result, setResult] = useState(0)
-    //console.log(onAdd)
+ 
 
 
     useEffect(() => {
@@ -44,29 +44,6 @@ const Counter = ({initial, stock, title, onAdd}) => {
         setCount(initial)
     }
 
-//    console.log("Avisa cada montaje y la actualización")
-    
- //   let count = 0
-
-  //  const increment = () => {
-  //      count = count + 1
-   // }
-
-  //  const decrement = () => {
-   //     count = count - 1
-   // }
-
-    
-    
-    //let count = 0
-
-    //const increment = () => {
-    //    count = count + 1
-    //}
-
-    //const decrement = ()  => {
-    //    count = count - 1
-    //}
 
     return (
         <div>

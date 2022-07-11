@@ -32,23 +32,6 @@ const ItemListContainer = (props) => {
             setCargando(false)
         })
 
-        // if(!categoriaId) {
-        //     getProductos().then(prods => {
-        //         SetProductos(prods)
-        //     }).catch(error =>  {
-        //         console.log(error)
-        //     }).finally(() => {
-        //         setCargando(false)
-        //     })
-        // } else {
-        //     getProductoByCategoria(categoriaId).then(prods => {
-        //         SetProductos(prods)
-        //     }).catch(error =>  {
-        //         console.log(error)
-        //     }).finally(() => {
-        //         setCargando(false)
-        //     })
-        // }
         
     }, [categoriaId] )
 
@@ -62,17 +45,6 @@ const ItemListContainer = (props) => {
         return <h1>Cargando producto...</h1>
     }
 
-//    const ComponenteProductos = productos.map(producto => {
-//        return (
-//            <li key={producto.id}>
-//                {producto.nombre}
-
-
-//            </li>
-//        )
-//    })
-    
-//    console.log(categoriaId)
     return (
         <div>
             <h1 className="titulo1">{banner}</h1>

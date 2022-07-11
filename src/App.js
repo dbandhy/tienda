@@ -9,8 +9,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NoExiste from './components/NoExiste/NoExiste';
 import { CartProvider } from './context/CartContext';
 import Compra from './components/Compra/Compra';
-// import Notificacion from './Notification/Notification';
 import { NotificacionProvider } from './Notification/Notification';
+
+
 
 function App() {
   
@@ -27,32 +28,6 @@ function App() {
   return (
     <div className="App">
 
-
-    {/*  <NavBar/>
-      <div>
-        <button onClick={() => setPagina("Lista")}>Lista</button>
-        <button onClick={() => setPagina("Detalle")}>Detalle</button>
-      </div>*/}
-      {/*pagina === "Lista" && <ItemListContainer greeting="Bienvenido a la tienda"/>}
-      {pagina === "Detalle" && <ItemDetailContainer/>}
-  <MercadoLibre/>
-      {/*<header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1 className="Titulo">Hi Honey!</h1>*/}
-        {/*<p style={{backgroundColor: "green"}}>
-          Bienvenido a mi tienda
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-
-        <button>Vamos a aprender</button>
-  </header>*/}
   <button onClick= {() => setShow(!show)}> Show/hide </button>
   { show && <Counter initial={0} stock={10} onAdd={handleAdd} /> }
     <NotificacionProvider>
@@ -67,6 +42,7 @@ function App() {
             <Route path='/categoria/:categoriaId' element={<ItemListContainer/>} />
             <Route path='/detalle/:productoId' element={<ItemDetailContainer/>} />
             <Route path='/cart' element={<Compra/>}/>
+            {/* <Route path='/checkout' element={<Checkout/>} /> */}
             <Route path='*' element={<NoExiste/>} />
           </Routes>
         </BrowserRouter>
