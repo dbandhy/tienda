@@ -10,7 +10,7 @@ const Item = ( { id, nombre , img, precio, categoria } ) => {
         <article className="imagendeproducto" onClick={() => console.log("hiciste click en item")}> 
             <h2>{nombre}</h2>
             <picture>
-                <img src={img} alt={nombre} />
+                <img className="producto" src={img} alt={nombre} />
             </picture>
             <section>
                 <p>
