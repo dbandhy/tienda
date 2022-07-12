@@ -1,3 +1,4 @@
+import './ItemCart.css'
 import { useContext } from 'react'
 import CartContexto from "../../context/CartContext"
 
@@ -10,7 +11,7 @@ const ItemCart = ({ id, nombre, quantity, precio }) => {
     }
 
     return (
-        <article>
+        <article className='Item' >
             <header>
                 <h2>
                     {nombre}

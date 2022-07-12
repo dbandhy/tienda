@@ -1,4 +1,4 @@
-import { useState , useEffect ,createContext } from "react"
+import { useState , useEffect ,createContext, useRef } from "react"
 
 const CartContexto = createContext()
 
@@ -7,9 +7,23 @@ export const CartProvider = ( { children }) => {
     const [cart , setCart ] = useState([])
     const [totalQuantity, setTotalQuantity] = useState(0)
 
+    // const renderRef = useRef(0)
 
-    console.log(cart)
+    // useEffect(() => {
+    //     const cartSaved = localStorage.getItem("cart")
+    //     const cartParsed = JSON.parse(cartSaved)
+    //     setCart(cartParsed)
+    // }, [])
 
+    // console.log(cart)
+
+    // useEffect(() => {
+    //     if(renderRef.current > 0) {
+    //         localStorage.setItem("cart", JSON.stringify(cart))
+    //     }
+    //    renderRef.current += 1
+        
+    // }, [cart])
 
     useEffect (() => {
             let totalQuantity = 0
@@ -48,11 +62,13 @@ export const CartProvider = ( { children }) => {
         cart.forEach(prod => {
             total += prod.quantity * prod.precio
         })
+
+        return total
     }
 
 
     return (
-        <CartContexto.Provider value={{cart, addItem, removeItem, isInCart, clearCart, getTotal, totalQuantity}}>
+        <CartContexto.Provider value={{cart, totalQuantity, addItem, removeItem, isInCart, clearCart, getTotal }}>
 
                 {children}
 

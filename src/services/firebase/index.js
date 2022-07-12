@@ -7,12 +7,12 @@ import { getFirestore } from "firebase/firestore";
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBmMxXVauM5Y0yZXsB_qFuY3U8p0Onx740",
-  authDomain: "hihoney-77472.firebaseapp.com",
-  projectId: "hihoney-77472",
-  storageBucket: "hihoney-77472.appspot.com",
-  messagingSenderId: "306432390163",
-  appId: "1:306432390163:web:75d0d96ea79f35e85e3be6"
+  apiKey: process.env.REACT_APP_apiKey,
+  authDomain: process.env.REACT_APP_authDomain,
+  projectId: process.env.REACT_APP_projectId,
+  storageBucket: process.env.REACT_APP_storageBucket,
+  messagingSenderId: process.env.REACT_APP_messagingSenderId,
+  appId: process.env.REACT_APP_appId
 };
 
 

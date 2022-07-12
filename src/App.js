@@ -1,7 +1,5 @@
-import React, { useState } from 'react';
-
+import React from 'react';
 import './App.css';
-import Counter from './components/Counter/Counter.js'; 
 import NavBar from './components/NavBar/NavBar.js';
 import ItemListContainer from './components/ItermListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
@@ -15,21 +13,13 @@ import { NotificacionProvider } from './Notification/Notification';
 
 function App() {
   
-  const [show, setShow] = useState(true)
-//  const [pagina, setPagina] = useState ("Lista")
 
 
 
-
-  const handleAdd = () => {
-    console.log("Se ejecutó")
-  }
 
   return (
     <div className="App">
 
-  <button onClick= {() => setShow(!show)}> Show/hide </button>
-  { show && <Counter initial={0} stock={10} onAdd={handleAdd} /> }
     <NotificacionProvider>
       <CartProvider>
         <BrowserRouter>

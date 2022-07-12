@@ -1,0 +1,25 @@
+.click {
+    background: #d16f07;
+    -webkit-border-radius: 28;
+      -moz-border-radius: 28;
+    border-radius: 28px;
+    
+  color: #fafafa;
+  font-size: 27px;
+  padding: 19px;
+  text-decoration: none;
+}
+
+.click:hover {
+    background: #2079b0;
+    background-image: -webkit-linear-gradient(top,#e97815, #e0cf30);
+    background-image: -moz-linear-gradient(top, #e97815, #e0cf30);
+    background-image: -ms-linear-gradient(top, #e97815, #e0cf30);
+    background-image: -o-linear-gradient(top, #e97815, #e0cf30);
+    background-image: linear-gradient(to bottom, #e97815, #e0cf30);
+    text-decoration: none;
+  }
+
+.total {
+    font-size:xx-large
+}

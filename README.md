@@ -10,6 +10,17 @@ Hi Honey vende mieles de abejas en distintos formatos: va desde la miel natural 
 
 Para ingresar al proyecto primero debes correr npm install
 
+# Running
+
+$ git clone https://github.com/dbandhy/tienda.git
+$ cd app1
+$ npm install
+$ npm start
+
+# Environment 
+
+Ingresas a .env para las credenciales
+
 # Trabajar el código
 
 El condigo fuente del proyecto se realizó con React, JS, HTML y CSS. Para desarrollar el proyecto se descargó la última versión de React y se editó con las necesidades de Hi Honey!
@@ -17,6 +28,7 @@ El condigo fuente del proyecto se realizó con React, JS, HTML y CSS. Para desar
 # Carpetas y visualización
 
 La metodología en que se basa Hi Honey! en React es a través de Componentes. Por ende se trabajó la creación de varias carpetas, donde cada una presenta un componente Padre o Hijo y su respectivo archivo CSS para exportarlo con estilos predeterminados.
+
 
 # Pruebas
 

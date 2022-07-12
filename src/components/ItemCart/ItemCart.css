@@ -1,0 +1,56 @@
+.Item {
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+    padding: 50px;
+    margin: 80px;
+    font-size: 30px;
+    background-color: rgb(204, 147, 55);
+    border: 2px solid #f2f229;
+    border-radius: 10px;
+}
+
+.InfoItem {
+    margin-right: 50px;
+}
+
+.ContainerItemCartItem {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ItemHeaderCartItem {
+    display: flex;
+    justify-content: space-between;
+}
+
+.InfoCartItem {
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ButtonCartItem {
+    width: auto;
+    padding: 12px;
+    font-size: 8px;
+    background: #131213;
+    border-radius: 8px;
+    flex: none;
+    display: flex;
+    order: 1;
+    align-self: center;
+    flex-grow: 0;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #e69045;
+    border: none;
+    border-style: none;
+    cursor: pointer;
+    outline: inherit;
+}
+
+.ItemFooterCartItem {
+    display: flex;
+}

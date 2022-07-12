@@ -1,3 +1,4 @@
+import "./compra.css"
 import { useContext, useState } from "react"
 import CartContexto from  "../../context/CartContext"
 import Seleccionar from "../Seleccionar/Seleccionar"
@@ -12,7 +13,7 @@ import { db } from "../../services/firebase/index"
 const Compra = () => {
 
     const [cargando, setCargando] = useState(false)
-    const { cart, clearCart, getTotal, getQuantity } = useContext(CartContexto)
+    const { cart, clearCart, getTotal, totalQuantity } = useContext(CartContexto)
 
     const total = getTotal()
 
@@ -31,8 +32,8 @@ const Compra = () => {
 
             },
 
-            // items: cart,
-            // total: total
+            items: cart,
+            total: total
         }
 
         const batch = writeBatch(db)
@@ -89,7 +90,7 @@ const Compra = () => {
         return <h1>Se está generando su orden</h1>
     }
 
-    // if(getQuantity() === 0) {
+    // if(totalQuantity === 0) {
     //     return <h1>NO AGREGÓ PRODUCTOS</h1>
     // }
     
@@ -101,9 +102,11 @@ const Compra = () => {
             
                 <main>
                     {cart.map(prod => <ItemCart key={prod.id} {...prod} />)}
-                    <h3> Total: ${total} </h3>
-                    <button onClick={() => clearCart()} >Limpiar carrito</button>
-                    <button onClick={handleCreateOrder } >Generar Orden</button>
+                    <h3 className="total"> Total: ${total} </h3>
+                    <button  className="click"
+                     onClick={() => clearCart()} >Limpiar carrito</button>
+                    <button className="click"
+                     onClick={handleCreateOrder } >Generar Orden</button>
                 </main>
                                 <h2> Seleccione la opción de compra </h2>
                                         <Seleccionar/> 

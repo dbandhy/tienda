@@ -14,10 +14,10 @@ const Item = ( { id, nombre , img, precio, categoria } ) => {
             </picture>
             <section>
                 <p>
-                    Precio: ${precio}
+                    Precio: {precio}
                 </p>
                 <p>
-                    ${categoria}
+                    {categoria}
                 </p>
             </section>
             <footer>
