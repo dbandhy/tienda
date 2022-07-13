@@ -4,7 +4,7 @@ import CartContexto from  "../../context/CartContext"
 import Seleccionar from "../Seleccionar/Seleccionar"
 import ItemCart from "../ItemCart/ItemCart"
 import {addDoc , collection, writeBatch, getDocs , documentId  , query, where } from "firebase/firestore"
-
+import Formulario from "../Checkout/Checkout"
 import { useNotificacion } from "../../Notification/Notification"
 
 import { db } from "../../services/firebase/index"
@@ -99,7 +99,7 @@ const Compra = () => {
         <>    
 
             <h1>    COMPRA </h1>
-            
+            < Formulario/>
                 <main>
                     {cart.map(prod => <ItemCart key={prod.id} {...prod} />)}
                     <h3 className="total"> Total: ${total} </h3>
@@ -109,7 +109,9 @@ const Compra = () => {
                      onClick={handleCreateOrder } >Generar Orden</button>
                 </main>
                                 <h2> Seleccione la opción de compra </h2>
-                                        <Seleccionar/> 
+                                        <Seleccionar/>
+                                        
+                                         
         </>        
     )
     
