@@ -1,7 +1,12 @@
 .Exito {
-    background-color: goldenrod;
+    background-color: rgb(238, 199, 101);
+    font-size: x-large;
+    font-style: italic;
+    color: black
+    ;
 }
 
 .error {
     background-color: darkred;
+    font-size: x-large;
 }

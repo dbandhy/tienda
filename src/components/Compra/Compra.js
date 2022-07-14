@@ -8,6 +8,7 @@ import Formulario from "../Checkout/Checkout"
 import { useNotificacion } from "../../Notification/Notification"
 
 import { db } from "../../services/firebase/index"
+import { Link } from "react-router-dom"
 
 
 const Compra = () => {
@@ -23,6 +24,35 @@ const Compra = () => {
         setCargando(true)
         console.log("orden creada")
 
+
+
+        //Formulario
+    // const [values, setValues] = useState({
+    //     name: "",
+    //     email: "",
+    //     phone: "",
+    //     address: "",
+    // });
+
+    // const handleChange = (e) => {
+    //     const { target } = e;
+    //     const { name, value } = target;
+    //     setValues({ ...values, [name]: value });
+    // };
+
+
+    //     const objOrder = {
+    //     buyer: {
+    //         name: values.name,
+    //         email: values.email,
+    //         phone: values.phone,
+    //         address: values.address,
+    //     },
+    //     items: cart,
+    //     total: total,
+    //     };
+        
+        
         const objOrder = {
             comprador: {
                 nombre: "Diego Bandhy",
@@ -99,7 +129,7 @@ const Compra = () => {
         <>    
 
             <h1>    COMPRA </h1>
-            < Formulario/>
+            
                 <main>
                     {cart.map(prod => <ItemCart key={prod.id} {...prod} />)}
                     <h3 className="total"> Total: ${total} </h3>
@@ -110,7 +140,7 @@ const Compra = () => {
                 </main>
                                 <h2> Seleccione la opción de compra </h2>
                                         <Seleccionar/>
-                                        
+                                        <Formulario/>
                                          
         </>        
     )

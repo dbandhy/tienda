@@ -44,7 +44,7 @@ export const NotificacionProvider = ( {children} ) => {
         setMsgConfig({ severity: sev , message:msg })
         setTimeout( () => {
             setMsgConfig({ ...msgConfig, message: ""})
-        }, 4000)
+        }, 40000)
 
     }
 

@@ -8,6 +8,7 @@ import NoExiste from './components/NoExiste/NoExiste';
 import { CartProvider } from './context/CartContext';
 import Compra from './components/Compra/Compra';
 import { NotificacionProvider } from './Notification/Notification';
+import Formulario from './components/Checkout/Checkout';
 
 
 
@@ -32,7 +33,7 @@ function App() {
             <Route path='/categoria/:categoriaId' element={<ItemListContainer/>} />
             <Route path='/detalle/:productoId' element={<ItemDetailContainer/>} />
             <Route path='/cart' element={<Compra/>}/>
-            {/* <Route path='/checkout' element={<Checkout/>} /> */}
+            <Route path='/checkout' element={<Formulario/>} />
             <Route path='*' element={<NoExiste/>} />
           </Routes>
         </BrowserRouter>

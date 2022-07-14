@@ -15,9 +15,9 @@ const NavBar = () => {
         
 
 
-                <NavLink to="/categoria/MielPura" className= {({ isActive }) => isActive ? 'texto' : 'textoSeleccionado'}> pura </NavLink>
-                <NavLink to="/categoria/MielInfusionada" className= {({ isActive }) => isActive ? 'texto' : 'textoSeleccionado'}> infusionada </NavLink>
-                <NavLink to="/categoria/MielGourmet" className= {({ isActive }) => isActive ? 'texto' : 'textoSeleccionado'}> gourmet </NavLink>
+                <NavLink to="/categoria/pura" className= {({ isActive }) => isActive ? 'texto' : 'textoSeleccionado'}> pura </NavLink>
+                <NavLink to="/categoria/infusionada" className= {({ isActive }) => isActive ? 'texto' : 'textoSeleccionado'}> infusionada </NavLink>
+                <NavLink to="/categoria/gourmet" className= {({ isActive }) => isActive ? 'texto' : 'textoSeleccionado'}> gourmet </NavLink>
                 <NavLink to="/categoria/MielCosmética" className= {({ isActive }) => isActive ? 'texto' : 'textoSeleccionado'}> cosmética </NavLink>
 
                 
