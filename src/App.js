@@ -34,6 +34,7 @@ function App() {
             <Route path='/detalle/:productoId' element={<ItemDetailContainer/>} />
             <Route path='/cart' element={<Compra/>}/>
             <Route path='/checkout' element={<Formulario/>} />
+           
             <Route path='*' element={<NoExiste/>} />
           </Routes>
         </BrowserRouter>

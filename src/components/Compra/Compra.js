@@ -20,7 +20,7 @@ const Compra = () => {
 
     const setNotificacion = useNotificacion()
 
-    const handleCreateOrder = () => {
+    const handleCreate = () => {
         setCargando(true)
         console.log("orden creada")
 
@@ -51,7 +51,35 @@ const Compra = () => {
     //     items: cart,
     //     total: total,
     //     };
+
+    // const [values, setValues] = useState({
+    //     name: "",
+    //     email: "",
+    //     phone: "",
+    //     address: "",
+    //   });
+    
+    //   const handleChange = (e) => {
+    //     const { target } = e;
+    //     const { name, value } = target;
+    //     setValues({ ...values, [name]: value });
+    //   };
         
+    //   const handleCreateForm = () => {
+    //     setCargando(true);
+    
+
+    //     const objOrder = {
+    //       comprador: {
+    //         name: values.name,
+    //         email: values.email,
+    //         phone: values.phone,
+    //         address: values.address,
+    //       },
+    //       items: cart,
+    //       total: total,
+    //     };
+    //   }
         
         const objOrder = {
             comprador: {
@@ -129,19 +157,23 @@ const Compra = () => {
         <>    
 
             <h1>    COMPRA </h1>
-            
+            <Formulario/>
                 <main>
                     {cart.map(prod => <ItemCart key={prod.id} {...prod} />)}
                     <h3 className="total"> Total: ${total} </h3>
+                    
+                    {/* {cart.map(prod => <Formulario key={prod.id} {...prod} />)} */}
+                    
                     <button  className="click"
                      onClick={() => clearCart()} >Limpiar carrito</button>
+                     
                     <button className="click"
-                     onClick={handleCreateOrder } >Generar Orden</button>
+                     onClick={handleCreate } >Generar Orden</button>
                 </main>
-                                <h2> Seleccione la opción de compra </h2>
+                         
+                                        
                                         <Seleccionar/>
-                                        <Formulario/>
-                                         
+
         </>        
     )
     
