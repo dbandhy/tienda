@@ -84,7 +84,7 @@ const Formulario = () => {
       .then(({ id }) => {
         batch.commit();
         clearCart();
-        setNotificacion("success", `El nuemro de Orden es: ${id}`);
+        setNotificacion("success", `El id de compra es: ${id}`);
       })
       .catch((error) => {
         if (error.type === "out_of_stock") {
