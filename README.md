@@ -1,6 +1,8 @@
 
 # GIF
 
+Interfase para generar un ticket de compra y pedidos para Hi Honey, tienda física llevada a la virtualidad de mieles especializadas.
+
 https://picasion.com/i/2EUY3
 https://drive.google.com/file/d/1QLGOX1dzOuRPGNJrL4JS9xGvlzCvvoY9/view?usp=sharing
 
