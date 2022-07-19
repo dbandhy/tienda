@@ -8,7 +8,7 @@ import Formulario from "../Checkout/Checkout"
 import { useNotificacion } from "../../Notification/Notification"
 
 import { db } from "../../services/firebase/index"
-import { Link } from "react-router-dom"
+
 
 
 const Compra = () => {
@@ -25,70 +25,15 @@ const Compra = () => {
         console.log("orden creada")
 
 
-
-        //Formulario
-    // const [values, setValues] = useState({
-    //     name: "",
-    //     email: "",
-    //     phone: "",
-    //     address: "",
-    // });
-
-    // const handleChange = (e) => {
-    //     const { target } = e;
-    //     const { name, value } = target;
-    //     setValues({ ...values, [name]: value });
-    // };
-
-
-    //     const objOrder = {
-    //     buyer: {
-    //         name: values.name,
-    //         email: values.email,
-    //         phone: values.phone,
-    //         address: values.address,
-    //     },
-    //     items: cart,
-    //     total: total,
-    //     };
-
-    // const [values, setValues] = useState({
-    //     name: "",
-    //     email: "",
-    //     phone: "",
-    //     address: "",
-    //   });
-    
-    //   const handleChange = (e) => {
-    //     const { target } = e;
-    //     const { name, value } = target;
-    //     setValues({ ...values, [name]: value });
-    //   };
-        
-    //   const handleCreateForm = () => {
-    //     setCargando(true);
-    
-
-    //     const objOrder = {
-    //       comprador: {
-    //         name: values.name,
-    //         email: values.email,
-    //         phone: values.phone,
-    //         address: values.address,
-    //       },
-    //       items: cart,
-    //       total: total,
-    //     };
-    //   }
-        
+       
         const objOrder = {
-            comprador: {
-                nombre: "Diego Bandhy",
-                celular: "123566",
-                direccion: "Jr. 124",
-                correo: "test@test.com"
+        //     // comprador: {
+        //     //     nombre: "Diego Bandhy",
+        //     //     celular: "123566",
+        //     //     direccion: "Jr. 124",
+        //     //     correo: "test@test.com"
 
-            },
+        //     // },
 
             items: cart,
             total: total
@@ -121,7 +66,9 @@ const Compra = () => {
                 if (fueraDeStock.length === 0) {
                     const collectionRef = collection(db, "orders")
 
-                    return addDoc(collectionRef, objOrder)
+                    return addDoc(collectionRef, 
+                        objOrder
+                        )
                 } else {
                     return Promise.reject({type: "fuera_de_stock", productos: fueraDeStock})
                 }
@@ -162,7 +109,6 @@ const Compra = () => {
                     {cart.map(prod => <ItemCart key={prod.id} {...prod} />)}
                     <h3 className="total"> Total: ${total} </h3>
                     
-                    {/* {cart.map(prod => <Formulario key={prod.id} {...prod} />)} */}
                     
                     <button  className="click"
                      onClick={() => clearCart()} >Limpiar carrito</button>
